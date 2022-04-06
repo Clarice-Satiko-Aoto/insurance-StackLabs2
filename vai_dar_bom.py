@@ -206,7 +206,7 @@ if pagina== "Equipe":
     col1,col2,col3 = st.columns([1,3,2])
     col1,col2,col3 = st.columns([1,3,2])
     with col1:
-            image3 = Image.open("./imagens/Clarice.png")
+            image3 = Image.open("./imagens/clarice.png")
             st.image(image3, width=100)
             col2.markdown('**Clarice Satiko Aoto**')
             col2.write("Engenheira de Machine Learning | UI Designer Jr.")
