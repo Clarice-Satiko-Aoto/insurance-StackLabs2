@@ -139,7 +139,7 @@ if pagina== "Roadmap":
     st.subheader('**Análise exploratória**')
     st.markdown('Abaixo alguns gráficos da fase de análise exploratória:')
     #lendo o arquivo
-    df = pd.read_csv('C:/insurance/new_start/train.csv')
+    df = pd.read_csv('train.csv')
 
     idade_carro = pd.DataFrame(df['Vehicle_Age'].value_counts())
     st.bar_chart(idade_carro)
