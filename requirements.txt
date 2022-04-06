@@ -1,15 +1,10 @@
 pip==22.0.4
 pandas==1.2.0
 streamlit==1.4.0
-regex==2022.1.18
-nltk==3.6.7
 pickleshare==0.7.5
-mglearn==0.1.9
 scikit-learn==1.0.2
 joblib==1.1.0 
 matplotlib==3.5.1
 numpy==1.20.0 
-packaging==21.3
 Pillow==9.1.0 
-pyparsing==3.0.7
 python-dateutil==2.8.2
