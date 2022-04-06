@@ -4,3 +4,4 @@ streamlit==1.4.0
 pickleshare==0.7.5
 seaborn==0.11.2
 matplotlib==3.5.1
+pip==22.0.4
