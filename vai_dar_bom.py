@@ -137,7 +137,18 @@ if pagina== "Roadmap":
     st.image(dados, width=700)
 
     st.subheader('**Análise exploratória**')
+    st.markdown('Abaixo alguns gráficos da fase de análise exploratória:')
+    #lendo o arquivo
+    df = pd.read_csv('C:/insurance/new_start/train.csv')
 
+    idade_carro = pd.DataFrame(df['Vehicle_Age'].value_counts())
+    st.bar_chart(idade_carro)
+
+    sinistro = pd.DataFrame(df['Previously_Insured'].value_counts())
+    st.bar_chart(sinistro)
+
+    idade = pd.DataFrame(df['Age'].value_counts())
+    st.line_chart(idade)
     st.write('*Principais insights*')
     st.markdown('* Perfil dos clientes interessados – Maioria homens, média de 40 anos, aproximadamente 6 meses na base, não tiveram seguro anteriormente mas já tiveram algum tipo de sinistro, idade do veículo entre 1 e 2 anos.')
     st.markdown('* Porcentagem de interessados total – 12,26%')
