@@ -28,7 +28,7 @@ paginas = ['Sistema', 'Insurance Prediction', "Roadmap",'Equipe', 'Agradecimento
 ###### SIDE BAR ######
 col1, col2, col3 = st.sidebar.columns([1, 3, 1])
 with col2:
-    image1 = Image.open('c:/insurance/new_start/imagens/Koalas_B2.png')
+    image1 = Image.open('./imagens/Koalas_B2.png')
     st.image(image1, width=120)
 
     pagina = st.sidebar.radio("Navegação", paginas)
