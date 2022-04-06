@@ -81,13 +81,6 @@ if pagina== "Sistema":
         
 
 
-        #Num total de 508 ligações, o algoritmo de predição indica que 199 clientes estarão interessados (Verdadeiro Positivo). Essa métrica é bem interessante para o departamento de vendas. Como o recurso de realizar ligações é limitado, essa classificação tornará viável o fechamento de negócio com  39,17% das ligações realizadas.') 
-        # 314 mil clientes na listagem, irá tomar as ações de marketing em cima dos clientes classificações como interessados (Predicted Class = 1). Num total de 508 ligações, o algoritmo de predição indica que 199 clientes estarão interessados (Verdadeiro Positivo). Essa métrica é bem interessante para o departamento de vendas. Como o recurso de realizar ligações é limitado, essa classificação tornará viável o fechamento de negócio com  39,17% das ligações realizadas. 
-
-        # Como sugestão, para os clientes classificados como não interessados (Predicted Class = 0), a empresa poderá tomar ações como envio de email marketing, envio de whatsapp, pois conforme observado, temos um total de 13.745 mil clientes interessados, mas que foram classificados como não interessados (Falso Negativo).
-
-
-
 
 ###### Insurance Prediction ######
 if pagina== "Insurance Prediction":
@@ -149,6 +142,11 @@ if pagina== "Roadmap":
 
     idade = pd.DataFrame(df['Age'].value_counts())
     st.line_chart(idade)
+    
+    canal = pd.DataFrame(df['Policy_Sales_Channel'].value_counts())
+    st.line_chart(canal)
+
+    
     st.write('*Principais insights*')
     st.markdown('* Perfil dos clientes interessados – Maioria homens, média de 40 anos, aproximadamente 6 meses na base, não tiveram seguro anteriormente mas já tiveram algum tipo de sinistro, idade do veículo entre 1 e 2 anos.')
     st.markdown('* Porcentagem de interessados total – 12,26%')
