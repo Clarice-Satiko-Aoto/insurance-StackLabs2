@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Apr 05 2022
-
-@author: @Clarice_Aoto
+@author: @Clarice_Aot
 """
 
 import pandas as pd
@@ -14,7 +12,6 @@ import matplotlib.pyplot as plt
 import collections
 import PIL
 from PIL import Image
-
 
 
 
@@ -31,7 +28,7 @@ paginas = ['Sistema', 'Insurance Prediction', "Roadmap",'Equipe', 'Agradecimento
 ###### SIDE BAR ######
 col1, col2, col3 = st.sidebar.columns([1, 3, 1])
 with col2:
-    image1 = Image.open('./imagens/Koalas_B2.png')
+    image1 = Image.open('c:/insurance/new_start/imagens/Koalas_B2.png')
     st.image(image1, width=120)
 
     pagina = st.sidebar.radio("Navegação", paginas)
@@ -47,7 +44,7 @@ if pagina== "Sistema":
         df = pd.read_csv(uploaded_file)
         print(df) # checar a saída no terminal
         # predição dos novos dados
-        loaded_model = pickle.load(open('model_lr04.04.pkl', 'rb'))
+        loaded_model = pickle.load(open('c:/insurance/new_start/model_lr04.06.pkl', 'rb'))
         #print(loaded_model)
         y_pred = loaded_model.predict(df)
         resultado = collections.Counter(y_pred)
@@ -88,7 +85,7 @@ if pagina== "Insurance Prediction":
     st.subheader('Insurance Prediction Web App')
 
     # loading the saved model
-    loaded_model = pickle.load(open('model_lr04.04.pkl', 'rb'))
+    loaded_model = pickle.load(open('c:/insurance/new_start/model_lr04.06.pkl', 'rb'))
 
     column_1, column_2 = st.columns(2)
     with column_1:
@@ -132,22 +129,27 @@ if pagina== "Roadmap":
 
     st.subheader('**Análise exploratória**')
     st.markdown('Abaixo alguns gráficos da fase de análise exploratória:')
-    #lendo o arquivo
-    df = pd.read_csv('train.csv')
+    df = pd.read_csv('C:/insurance/new_start/train.csv')
 
     idade_carro = pd.DataFrame(df['Vehicle_Age'].value_counts())
     st.bar_chart(idade_carro)
+
 
     sinistro = pd.DataFrame(df['Previously_Insured'].value_counts())
     st.bar_chart(sinistro)
 
     idade = pd.DataFrame(df['Age'].value_counts())
     st.line_chart(idade)
-    
+
     canal = pd.DataFrame(df['Policy_Sales_Channel'].value_counts())
     st.line_chart(canal)
 
-    
+
+
+
+
+
+
     st.write('*Principais insights*')
     st.markdown('* Perfil dos clientes interessados – Maioria homens, média de 40 anos, aproximadamente 6 meses na base, não tiveram seguro anteriormente mas já tiveram algum tipo de sinistro, idade do veículo entre 1 e 2 anos.')
     st.markdown('* Porcentagem de interessados total – 12,26%')
@@ -216,10 +218,10 @@ if pagina== "Equipe":
     col1,col2,col3 = st.columns([1,3,2])
     col1,col2,col3 = st.columns([1,3,2])
     with col1:
-            image3 = Image.open("./imagens/clarice.png")
+            image3 = Image.open("./imagens/Clarice.png")
             st.image(image3, width=100)
             col2.markdown('**Clarice Satiko Aoto**')
-            col2.write("Engenheira de Machine Learning | UI Designer Jr.")
+            col2.write("Back-end | UI Designer Jr.")
             col2.write("[Linkedin](https://www.linkedin.com/in/claricesatikoaoto-bi-python-ux/)")
 
     
