@@ -28,7 +28,7 @@ paginas = ['Sistema', 'Insurance Prediction', "Roadmap",'Equipe', 'Agradecimento
 ###### SIDE BAR ######
 col1, col2, col3 = st.sidebar.columns([1, 3, 1])
 with col2:
-    image1 = Image.open('c:/insurance/new_start/imagens/Koalas_B2.png')
+    image1 = Image.open('./imagens/Koalas_B2.png')
     st.image(image1, width=120)
 
     pagina = st.sidebar.radio("Navegação", paginas)
@@ -44,7 +44,7 @@ if pagina== "Sistema":
         df = pd.read_csv(uploaded_file)
         print(df) # checar a saída no terminal
         # predição dos novos dados
-        loaded_model = pickle.load(open('./new_start/model_lr04.06.pkl', 'rb'))
+        loaded_model = pickle.load(open('./new_start/model_lr04.06.1.pkl', 'rb'))
         #print(loaded_model)
         y_pred = loaded_model.predict(df)
         resultado = collections.Counter(y_pred)
