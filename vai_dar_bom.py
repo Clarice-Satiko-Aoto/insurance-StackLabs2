@@ -46,7 +46,7 @@ if pagina== "Sistema":
         df = pd.read_csv(uploaded_file)
         print(df) # checar a saída no terminal
         # predição dos novos dados
-        loaded_model = pickle.load(open('model_lr04.04.pkl', 'rb'))
+        loaded_model = pickle.load(open('./model_lr04.04.pkl', 'rb'))
         #print(loaded_model)
         y_pred = loaded_model.predict(df)
         resultado = collections.Counter(y_pred)
@@ -94,7 +94,7 @@ if pagina== "Insurance Prediction":
     st.subheader('Insurance Prediction Web App')
 
     # loading the saved model
-    loaded_model = pickle.load(open('model_lr04.04.pkl', 'rb'))
+    loaded_model = pickle.load(open('./model_lr04.04.pkl', 'rb'))
 
     column_1, column_2 = st.columns(2)
     with column_1:
