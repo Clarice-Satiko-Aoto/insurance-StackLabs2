@@ -46,7 +46,7 @@ if pagina== "Sistema":
         df = pd.read_csv(uploaded_file)
         print(df) # checar a saída no terminal
         # predição dos novos dados
-        loaded_model = pickle.load(open('./model_lr04.04.pkl', 'rb'))
+        loaded_model = pickle.load(open('https://github.com/Clarice-Satiko-Aoto/insurance-StackLabs2/blob/main/model_lr04.04.pkl', 'rb'))
         #print(loaded_model)
         y_pred = loaded_model.predict(df)
         resultado = collections.Counter(y_pred)
