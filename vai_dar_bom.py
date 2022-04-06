@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: @Clarice_Aoto
+@author: @Clarice Aoto
 """
 
 import pandas as pd
@@ -205,6 +205,10 @@ print(pd.crosstab(y_teste_u, y_pred_lr_u, rownames=['Real'],
     resultado = Image.open("./imagens/saida_modelo.png")
     st.image(resultado, width=300)
 
+    
+    st.subheader('**Tecnolgias utilizadas**')
+    st.markdown('AWS, Google colab, Jupyter Notebook, VsCode, Figma, Trello')
+    
     
     st.subheader('**Conclusão**')
     st.markdown('texto')
