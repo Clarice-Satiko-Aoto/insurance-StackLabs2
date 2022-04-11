@@ -23,7 +23,7 @@ st.set_page_config(
     menu_items=None)
 
 
-paginas = ['Sistema', 'Insurance Prediction', "Roadmap",'Equipe', 'Agradecimentos']
+paginas = ['Home','Sistema', 'Insurance Prediction', "Roadmap",'Equipe', 'Agradecimentos']
 
 ###### SIDE BAR ######
 col1, col2, col3 = st.sidebar.columns([1, 3, 1])
@@ -33,6 +33,14 @@ with col2:
 
     pagina = st.sidebar.radio("Navegação", paginas)
 
+###### Home ######
+if pagina== "Home":
+    st.subheader('Introdução')
+    st.markdown('Este é um projeto de estudo de viabilidade para oferecer seguro veicular aos segurados \
+        do plano de saúde da empresa X.')
+    st.markdown('Nosso objetivo é identificar os possíveis interessados no serviço, com 80% de precisão ou mais, para que os departamentos responsáveis possam mapear o persona específico, o serivço ideal para cada perfil de persona, assim como valores personalizados.')
+    st.markdown("Foi desenvolvido um MVP com a possibilidade de a empresa entrar com dados em massa dos clientes, assim como entrada indiviual de informação para que possam testar o modelo preditivo construído (links 'Sistema' e 'Insurance Prediction'.")
+    st.markdown("Como parte desenvolvimento do produto após validação pela empresa, ofereceremos a classificação dos clientes de acordo com a região, sexo e pacote de serviços especiais oferecidos.")
 
 
 ###### Sistema ######
@@ -53,8 +61,8 @@ if pagina== "Sistema":
 
         interessados = (y_pred == 1).sum()
         desinteressados = (y_pred == 0).sum()
-        percentual_pos = (count_resultado/interessados).round(2)
-        percentual_neg = (count_resultado/desinteressados).round(2)
+        percentual_pos = ((interessados*100)/count_resultado).round(2)
+        percentual_neg = ((desinteressados*100)/count_resultado).round(2)
 
         st.write("Total de interessados: ", interessados, '(', percentual_pos,'%)')
         st.write("Total de desinteressados: ", desinteressados, '(', percentual_neg, '%)')
@@ -75,8 +83,14 @@ if pagina== "Sistema":
         st.bar_chart(insured)
 
         vehicle= pd.DataFrame(df['Vehicle_Damage'].value_counts())
-        st.bar_chart(vehicle)        
+        st.bar_chart(vehicle)      
         
+    st.download_button(
+            label="Teste o modelo com este arquivo",
+            data=csv,
+            file_name='streamlit.csv',
+            mime='text/csv',
+            )
 
 
 
@@ -210,8 +224,8 @@ print(pd.crosstab(y_teste_u, y_pred_lr_u, rownames=['Real'],
     st.markdown('AWS, Google colab, Jupyter Notebook, VsCode, Figma, Trello')
     
     
-    st.subheader('**Conclusão**')
-    st.markdown('texto')
+    #st.subheader('**Conclusão**')
+    #st.markdown('texto')
 
 
 ###### Equipe ######
