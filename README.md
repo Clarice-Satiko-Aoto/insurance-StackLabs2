@@ -4,6 +4,6 @@ Este é um projeto de estudo de viabilidade de oferecer seguro veicular aos segu
 
 Nosso objetivo é identificar os possíveis interessados no serviço, com 80% de precisão ou mais, para que os departamentos responsáveis possam mapear o persona específico, o serivço ideal para cada perfil de persona, assim como valores personalizados.
 
-Foi desenvolvido um MVP com a possibilidade de a empresa entrar com dados em massa dos clientes, assim como entrada indiviual de informação para que possam testar o modelo preditivo construído (links 'Sistema' e 'Insurance Prediction'.
+Foi desenvolvido um MVP com a possibilidade de a empresa entrar com dados em massa dos clientes, assim como entrada indiviual de informação para que possam testar o modelo preditivo construído (links 'Sistema' e 'Insurance Prediction' do link: https://share.streamlit.io/clarice-satiko-aoto/insurance-stacklabs2/main/vai_dar_bom.py).
 
 Como parte desenvolvimento do produto após validação pela empresa, ofereceremos a classificação dos clientes de acordo com a região, sexo e pacote de serviços especiais oferecidos.
