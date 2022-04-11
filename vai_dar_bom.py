@@ -85,12 +85,6 @@ if pagina== "Sistema":
         vehicle= pd.DataFrame(df['Vehicle_Damage'].value_counts())
         st.bar_chart(vehicle)      
         
-    st.download_button(
-            label="Teste o modelo com este arquivo",
-            #data=csv,
-            file_name='streamlit.csv',
-            mime='text/csv',
-            )
 
 
 
