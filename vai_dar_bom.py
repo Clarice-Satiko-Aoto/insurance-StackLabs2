@@ -87,7 +87,7 @@ if pagina== "Sistema":
         
     st.download_button(
             label="Teste o modelo com este arquivo",
-            data=csv,
+            #data=csv,
             file_name='streamlit.csv',
             mime='text/csv',
             )
